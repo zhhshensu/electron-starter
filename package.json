@@ -1,0 +1,52 @@
+{
+  "name": "electron-starter",
+  "private": true,
+  "description": "使用vite和electron构建的electron项目",
+  "version": "0.0.3",
+  "main": "dist-electron/nest/main.js",
+  "author": {
+    "name": "zhhshen",
+    "url": "https://github.com",
+    "email": "zshen049@gmail.com"
+  },
+  "scripts": {
+    "nest:dev": "tsc -W -p electron/nest/tsconfig.json",
+    "nest:build": "tsc -p electron/nest/tsconfig.json",
+    "render:dev": "vite",
+    "dev": "vite & npm run nest:dev",
+    "build": "npm run nest:build && vite build && electron-builder",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@nestjs/common": "^10.3.1",
+    "@nestjs/core": "^10.3.1",
+    "@nestjs/platform-express": "^10.3.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "reflect-metadata": "^0.2.1",
+    "rxjs": "^7.8.1"
+  },
+  "debug": {
+    "env": {
+      "VITE_DEV_SERVER_URL": "http://localhost:3344/"
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.6",
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "electron": "^28.1.4",
+    "electron-builder": "^24.9.1",
+    "eslint": "^8.55.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8",
+    "vite-plugin-electron": "0.28.0",
+    "vite-plugin-electron-renderer": "^0.14.5"
+  }
+}
